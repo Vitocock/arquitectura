@@ -36,8 +36,8 @@ def clasificar_imc(imc):
 def main():
     """Función principal para calcular y mostrar el IMC de un curso."""
     imc_promedio = 0
-    num_estudiantes = int(input("¿Cuántos estudiantes hay en el curso? "))
-    bajo_peso = normal = sobrepeso = obeso_g1 = obeso_g2 = obeso_g3 = 0 # Se puede hacer con arreglo
+    num_estudiantes = int(input("Ingrese el numero de estudiantes: "))
+    bajo_peso = normal = sobrepeso = obeso_g1 = obeso_g2 = obeso_g3 = 0
 
     for i in range(num_estudiantes):
         print(f"\n--- Datos del estudiante {i + 1} ---")
@@ -67,6 +67,6 @@ def main():
     print(f"Sobrepeso: {sobrepeso}")
     print(f"Obesidad grado I: {obeso_g1}")
     print(f"Obesidad grado II: {obeso_g2}")
-    print(f"Obesidad grado III (Mórbida): {obeso_g3}")
+    print(f"Obesidad grado III (Morbida): {obeso_g3}")
 
 main()

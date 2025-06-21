@@ -24,20 +24,23 @@ f35:   .float 35.0
 f39_9: .float 39.9
 zero_float: .float 0.0
 
+# Constante entera
+zero: .word 0
+
 .text
 .globl main
 main:
-    # Inicializar contadores
-    li $t0, 0       # i = 0
-    li $t1, 0       # bajo_peso
-    li $t2, 0       # normal
-    li $t3, 0       # sobrepeso
-    li $t4, 0       # obeso_g1
-    li $t5, 0       # obeso_g2
-    li $t6, 0       # obeso_g3
+    # Inicializar contadores usando lw desde variable 'zero'
+    lw $t0, zero       # i = 0
+    lw $t1, zero       # bajo_peso
+    lw $t2, zero       # normal
+    lw $t3, zero       # sobrepeso
+    lw $t4, zero       # obeso_g1
+    lw $t5, zero       # obeso_g2
+    lw $t6, zero       # obeso_g3
     l.s $f12, zero_float  # imc_promedio = 0.0
 
-    # Leer nï¿½mero de estudiantes
+    # Leer número de estudiantes
     li $v0, 4
     la $a0, prompt_n_estudiantes
     syscall
@@ -202,4 +205,3 @@ done:
 
     li $v0, 10
     syscall
-
