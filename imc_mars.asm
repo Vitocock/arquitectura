@@ -1,5 +1,5 @@
 .data
-prompt_n_estudiantes: .asciiz "¿Cuántos estudiantes hay en el curso? "
+prompt_n_estudiantes: .asciiz "ï¿½Cuï¿½ntos estudiantes hay en el curso? "
 prompt_peso:         .asciiz "\nPeso en kg (ej. 70.5): "
 prompt_altura:       .asciiz "Altura en metros (ej. 1.75): "
 newline:             .asciiz "\n"
@@ -7,11 +7,11 @@ resultados:          .asciiz "\n--- Resultados del IMC del Curso ---\n"
 imc_promedio_str:    .asciiz "IMC PROMEDIO: "
 clasificacion_str:   .asciiz "\n--- Clasificacion del IMC de los estudiantes ---\n"
 bajo_peso_str:       .asciiz "Bajo peso: "
-normal_str:          .asciiz "Peso Normal: "
-sobrepeso_str:       .asciiz "Sobrepeso: "
-obeso1_str:          .asciiz "Obesidad grado I: "
-obeso2_str:          .asciiz "Obesidad grado II: "
-obeso3_str:          .asciiz "Obesidad grado III (Mórbida): "
+normal_str:          .asciiz "\nPeso Normal: "
+sobrepeso_str:       .asciiz "\nSobrepeso: "
+obeso1_str:          .asciiz "\nObesidad grado I: "
+obeso2_str:          .asciiz "\nObesidad grado II: "
+obeso3_str:          .asciiz "\nObesidad grado III (Mï¿½rbida): "
 
 # Constantes flotantes
 f18_5: .float 18.5
@@ -37,7 +37,7 @@ main:
     li $t6, 0       # obeso_g3
     l.s $f12, zero_float  # imc_promedio = 0.0
 
-    # Leer número de estudiantes
+    # Leer nï¿½mero de estudiantes
     li $v0, 4
     la $a0, prompt_n_estudiantes
     syscall
