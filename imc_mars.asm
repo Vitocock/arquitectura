@@ -1,5 +1,5 @@
 .data
-prompt_n_estudiantes: .asciiz "�Cu�ntos estudiantes hay en el curso? "
+prompt_n_estudiantes: .asciiz "Ingrese el numero de estudiantes: "
 prompt_peso:         .asciiz "\nPeso en kg (ej. 70.5): "
 prompt_altura:       .asciiz "Altura en metros (ej. 1.75): "
 newline:             .asciiz "\n"
@@ -11,7 +11,7 @@ normal_str:          .asciiz "\nPeso Normal: "
 sobrepeso_str:       .asciiz "\nSobrepeso: "
 obeso1_str:          .asciiz "\nObesidad grado I: "
 obeso2_str:          .asciiz "\nObesidad grado II: "
-obeso3_str:          .asciiz "\nObesidad grado III (M�rbida): "
+obeso3_str:          .asciiz "\nObesidad grado III (Morbida): "
 
 # Constantes flotantes
 f18_5: .float 18.5
